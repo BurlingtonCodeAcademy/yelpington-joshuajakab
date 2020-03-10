@@ -1,5 +1,6 @@
 
 let listContainer = document.getElementById('restaurant-list')
+let restLink = document.getElementById("rest-link")
 
 /*------------------Adds the map---------------------------------------*/
 
@@ -9,7 +10,7 @@ let OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
 
-/*------------------Function to add all markers------------------------*/
+/*------------------Function to get the addresses------------------------*/
 
 async function getAddress() {
     let info = await fetch('https://json-server.burlingtoncodeacademy.now.sh/restaurants')
@@ -24,19 +25,24 @@ async function getAddress() {
             
         })
 
-        async function getName() {
-            let info = await fetch('https://json-server.burlingtoncodeacademy.now.sh/restaurants')
-        .then((data) => {
-            return data.json()
-        })
-        .then((jsonObj) => {
-            return jsonObj
-            
-        })
-        info.forEach((restaurant) => {
-        marker.bindPopup("restaurant.name").openPopup();
-        })
-        }
+//-------------------------------Put names on markers------------------------------------------------
+
+//        async function getName() {
+//            let info = await fetch('https://json-server.burlingtoncodeacademy.now.sh/restaurants')
+//        .then((data) => {
+//            return data.json()
+//        })
+//        .then((jsonObj) => {
+//            return jsonObj   
+//        })
+//        
+//    }
+//
+//    info.forEach((restaurant) => {
+//        let restName = getName(restaurant.name)
+//    })
+
+//------------------------------------Get lat and lon-----------------------------------------------
 
     async function getLatLon(address) {
         let latLon = await fetch(`https://nominatim.openstreetmap.org/search/?q=${address}&format=json`)
@@ -48,18 +54,15 @@ async function getAddress() {
                 let info = locInfo[0]
                 let lat = info.lat
                 let lon = info.lon
-                let marker = L.marker([lat, lon]).addTo(myMap)
-                
+                let marker = L.marker([lat, lon]).addTo(myMap)  
+                let restName = restaurant.name
+                marker.bindPopup(restName).openPopup();
             })
         
     }
 }
 
-/*------------------------------Add pop-up to markers--------------------*/
-
-
-
-/*----------------------------List o' restaurants------------------------*/
+//----------------------------List o' restaurants------------------------
 
 async function makeList() {
     let info = await fetch('https://json-server.burlingtoncodeacademy.now.sh/restaurants')
@@ -75,12 +78,18 @@ async function makeList() {
         let id = restaurant.id;
         let name = restaurant.name;
         let address = restaurant.address;
-        listContainer.innerHTML += `<li><a href="./restaurant.html"><b>${name}<br>${address}</b></a></li>`
+        listContainer.innerHTML += `<li><a><b>${name}<br>${address}</b></a></li>`
     })
 }
 
+//----------------------------Get Name of Restaurant-------------------------------
 
+function getName(event) {
+    if (event.target === restLink) {
+        
 
+    }
+    }
 
 
 

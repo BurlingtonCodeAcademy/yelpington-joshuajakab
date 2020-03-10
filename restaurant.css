@@ -26,14 +26,53 @@ body {
 
 
 .sidebar {
-    display: flex;
-    grid-area: sidebar;
-    width: 100vw;
+    font-family: 'Permanent Marker', cursive;
+    color:black;
+    text-align: center;
+    background-image: url('map-01.jpg');
+    border: 5px  solid  black;
+    margin: 5px;
+    padding: 5px;
+    width: 33vw;
+    box-shadow: -4px -4px 2px black;
+    
 }
 
-.map {
+.rest-map {
     grid-area: map;
     margin-right: 15px;
     border: 5px  solid  black;
     box-shadow: -4px -4px 2px black;
+    width: 50vw;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
 }
+
+.footer {
+    grid-area: footer;
+    background-color: black;
+    height: 150px;
+}
+
+#email-icon {
+    width: 75px;
+    margin-left: 40vw;
+    margin-top: 25px;
+}
+
+#fb-icon {
+    width: 75px;
+    margin-top: 25px;
+}
+
+#insta-icon {
+    width: 75px;
+    margin-top: 25px;
+}
+
+#twitter-icon {
+    width: 75px;
+    margin-top: 25px;
+}
+    

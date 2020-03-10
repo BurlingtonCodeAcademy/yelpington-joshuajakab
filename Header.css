@@ -1,0 +1,33 @@
+@charset "utf-8";
+	.NormalCharacterStyle
+{
+	font-family : Miriam Libre;
+	font-weight : bold;
+	font-size : 30px;
+	color : #231F20;
+	color : rgb(35, 31, 32);
+}
+.image1
+{
+	background-image : url(image1.png);
+	background-repeat : no-repeat;
+}
+.image2
+{
+	background-image : url(image2.png);
+	background-repeat : no-repeat;
+}
+.image
+{
+	background-image : url(image.png);
+	background-repeat : no-repeat;
+}
+.st0
+{
+	background : #231F20;
+	background : rgba(35, 31, 32, 1);
+	border-style : Solid;
+	border-color : #231F20;
+	border-color : rgba(35, 31, 32, 1);
+	border-width : 1px;
+}

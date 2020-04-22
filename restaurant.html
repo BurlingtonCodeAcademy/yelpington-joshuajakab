@@ -4,19 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="restaurant.css" />
+    <link rel="stylesheet" href="/restaurant.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    
 </head>
 
 <body>
     <div class="container">
-    <div class="header"><img src="Header-01.svg"></img> </div>
-    <div id="rest-map" class="rest-map"></div>
-    <div id="chosen-restaurant" class="sidebar"></div>
-    <div class="footer"><img src="footerlink-email.png" id="email-icon"/><img src="footerlink-facebook.png" id="fb-icon"/><img src="footerlink-instagram.png" id="insta-icon"/><img src="footerlink-twitter.png" id="twitter-icon"/> </div>
-    <script src="restaurant.js"></script>
+        <div class="header"><img src="/Header-01.svg"></img> </div>
+        <div id="rest-map" class="rest-map"></div>
+        <div class="sidebar"> 
+            <ul id="chosen-restaurant">
+
+            </ul>
+        </div>
+        <div class="footer"><img src="/footerlink-email.png" class="email-icon" /><img src="/footerlink-facebook.png" class="fb-icon" /><img src="/footerlink-instagram.png" class="insta-icon" /><img src="/footerlink-twitter.png" class="twitter-icon" /> </div>
+        <script src="/restaurant.js"></script>
+        <script>getAddress()</script>
+
     </div>
 </body>
 

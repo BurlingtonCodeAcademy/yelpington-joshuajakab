@@ -1,6 +1,8 @@
 .container {
     display: grid;
     max-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
     grid-template-columns: 19vw 19vw 19vw 19vw 19vw;
     grid-template-rows: auto;
     grid-gap: 1rem;
@@ -11,15 +13,19 @@
 }
 
 body {
+    top: 0;
+    left: 0;
+    margin: 0;
     background-color: #6d5b69;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%236d5b69'/%3E%3Cstop offset='1' stop-color='%23818b29'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%239fada9' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%239fada9' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%239fada9' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%239fada9' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.43'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .header {
     grid-area: header;
-    width: 100vw;
+    width: 99%;
     box-shadow: -4px -4px 2px black;
 }
     
@@ -28,8 +34,8 @@ body {
 .sidebar {
     font-family: 'Permanent Marker', cursive;
     color:black;
+    background-color: white;
     text-align: center;
-    background-image: url('map-01.jpg');
     border: 5px  solid  black;
     margin: 5px;
     padding: 5px;
@@ -37,6 +43,32 @@ body {
     box-shadow: -4px -4px 2px black;
     
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#name {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    color:black;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    width: 30vw;
+}
+
+li {
+    font-family: 'Permanent Marker', cursive;
+    color:black;
+    text-align: center;
+    margin: 1px;
+    padding: 5px;
+    width: 30vw;
+}   
+    
+
 
 .rest-map {
     grid-area: map;
@@ -55,23 +87,23 @@ body {
     height: 150px;
 }
 
-#email-icon {
+.email-icon {
     width: 75px;
     margin-left: 40vw;
     margin-top: 25px;
 }
 
-#fb-icon {
+.fb-icon {
     width: 75px;
     margin-top: 25px;
 }
 
-#insta-icon {
+.insta-icon {
     width: 75px;
     margin-top: 25px;
 }
 
-#twitter-icon {
+.twitter-icon {
     width: 75px;
     margin-top: 25px;
 }

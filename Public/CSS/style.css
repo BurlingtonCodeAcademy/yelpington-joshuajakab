@@ -1,3 +1,5 @@
+/*-----------------------Whole Page---------------------------*/
+
 .container {
     display: grid;
     max-height: 100vh;
@@ -23,11 +25,15 @@ body {
     overflow-x: hidden;
 }
 
+/*-------------------------------------Header---------------------*/
+
 .header {
     grid-area: header;
     width: 99%;
     box-shadow: -4px -4px 2px black;
 }
+
+/*------------------------------------SideBar--------------------*/
     
 .sidebar {
     display: flex;
@@ -68,6 +74,7 @@ li {
     box-shadow: -4px -4px 2px black;
 }   
     
+/*-------------------------------------Map----------------------*/
 
 .map {
     grid-area: map;
@@ -76,6 +83,7 @@ li {
     box-shadow: -4px -4px 2px black;
 }
 
+/*------------------------------Footer---------------------------*/
 
 .footer {
     grid-area: footer;

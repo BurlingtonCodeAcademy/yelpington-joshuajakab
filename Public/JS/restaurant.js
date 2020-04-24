@@ -1,7 +1,7 @@
 
 let restContainer = document.getElementById('chosen-restaurant')
 let id = window.location.href.slice(window.location.href.lastIndexOf('/') + 1);
-console.log(id)
+
 
 //------------------------------------Add the Map-------------------------------------//
 let secondMap = L.map('rest-map').setView([44.4780344, -73.2141866], 16);
